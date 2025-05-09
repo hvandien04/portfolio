@@ -1,7 +1,16 @@
 import ProjectCard from "./ui/ProjectCard";
+import { useEffect } from "react";
 import Button from "./ui/Button";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const Projects = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: true
+    });
+  }, []);
     const projects = [
         {
           title: "E-commerce Platform",
@@ -29,14 +38,19 @@ const Projects = () => {
                 </div>
                 <div className="space-y-8 md:mx-auto">
                   {projects.map((project, index) => (
-                    <ProjectCard 
+                    <div 
                       key={index}
-                      {...project}
-                      isEven={index % 2 === 1}
-                    />
+                      data-aos="fade-up"
+                      data-aos-delay={index * 100}
+                    >
+                      <ProjectCard 
+                        {...project}
+                        isEven={index % 2 === 1}
+                      />
+                    </div>
                   ))}
                 </div>
-                <div className="flex justify-center ">
+                <div className="flex justify-center" data-aos="fade-up">
                   <Button className="!text-black border border-black !bg-transparent">See More Project</Button>
 
                 </div> 
