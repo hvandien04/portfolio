@@ -21,12 +21,12 @@ const Skills = () => {
     {
       title: "Back-End Development",
       icon: <Code className="h-10 w-10 text-portfolio-lightBlue" />,
-      skills: ["Spring Boot", "Spring MVC", "Spring Data JPA", "Spring Security", "RESTful APIs"],
+      skills: ["Spring Boot", "Spring MVC", "Spring Data JPA", "Spring Security"],
     },
     {
       title: "Database Management",
       icon: <Laptop className="h-10 w-10 text-portfolio-lightBlue" />,
-      skills: ["MySQL", "Firebase", "Redis"],
+      skills: ["MySQL","SQL Server", "Firebase", "Redis"],
     },
     {
       title: "Other Skills",
